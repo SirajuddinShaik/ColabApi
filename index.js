@@ -4,7 +4,8 @@ const port = 3000;
 
 // Endpoint that sends a JSON response
 app
-  .get("/", (req, res) => {
+  .route("/")
+  .get((req, res) => {
     const jsonData = {
       message: "Hello, this is a JSON response!",
       timestamp: new Date().toISOString(),
