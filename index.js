@@ -1,4 +1,5 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 
@@ -13,7 +14,7 @@ app
     res.json(jsonData);
   })
   .post((req, res) => {
-    const details = req.body;
+    const details = req.query;
     console.log("Received details:", details);
     res.json({ message: "Details logged successfully" });
   });
