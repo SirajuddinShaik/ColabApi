@@ -16,7 +16,7 @@ app
   .post((req, res) => {
     const details = req.query;
     console.log("Received details:", details);
-    res.json({ message: "Details logged successfully" });
+    res.json({ message: "Details logged successfully", details: details });
   });
 
 // Start the server
